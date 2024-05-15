@@ -2,5 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* body {
-} */
+body {
+  @apply font-ui_roboto bg-ui_light text-ui_dark;
+}
