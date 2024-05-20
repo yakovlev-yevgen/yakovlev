@@ -39,8 +39,9 @@ const config: Config = {
         ui_light_transparent_80: 'rgba(241, 241, 241, 0.8)',
         ui_light_transparent_50: 'rgba(241, 241, 241, 0.5)',
         ui_dark_transparent_50: 'rgba(2, 2, 2, 0.5)',
+        ui_dark_transparent_80: 'rgba(2, 2, 2, 0.8)',
         ui_red: '#F80909',
-        // ui_overlay: '#323232CC', (старий макет, тут нема поки)
+        ui_overlay: 'rgba(2, 2, 2, 0.8)',
       },
 
       content: {
