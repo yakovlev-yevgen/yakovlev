@@ -205,6 +205,10 @@ const config: Config = {
           },
         ],
       },
+
+      transitionDuration: {
+        '250': '250ms',
+      },
     },
   },
   // plugins: [require('prettier-plugin-tailwindcss')],

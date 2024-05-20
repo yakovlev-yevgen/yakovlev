@@ -19,9 +19,9 @@ export const NavBar: React.FC<NavBarProps> = ({
     <ul
       className={cn(
         'w-fit flex gap-10',
-        { 'hidden xl:flex xl:gap-20': section === 'header' },
+        { 'hidden xl:flex xl:gap-20 h-10': section === 'header' },
         {
-          'mx-auto flex-col md:flex-row md:gap-20 xl:mx-0':
+          'mx-auto flex-col md:flex-row md:gap-20 xl:mx-0 md:h-10':
             section === 'footer',
         },
         {
