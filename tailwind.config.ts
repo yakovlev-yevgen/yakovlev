@@ -206,6 +206,7 @@ const config: Config = {
         ],
       },
 
+      // розширюємо тривалість переходу
       transitionDuration: {
         '250': '250ms',
       },
