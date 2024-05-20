@@ -1,7 +1,7 @@
 import { Container } from '@/components/ui-kit/Container';
 import { Logo } from '@/components/ui-kit/Logo';
 import { SectionTitle } from '@/components/ui-kit/SectionTitle';
-import { Socials } from '@/components/ui-kit/Socials';
+import { Socials } from '@/components/modules/Socials';
 
 export default function Home() {
   return (

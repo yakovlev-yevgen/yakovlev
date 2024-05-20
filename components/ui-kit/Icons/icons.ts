@@ -15,3 +15,5 @@ export const ICONS = {
   FAVICON: IconFavicon,
   LOGO: IconLogo,
 };
+
+export type IconName = keyof typeof ICONS;
