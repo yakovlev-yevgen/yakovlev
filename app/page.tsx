@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui-kit/Button/Button';
 import { Container } from '@/components/ui-kit/Container';
 import { SectionTitle } from '@/components/ui-kit/SectionTitle';
 
@@ -6,6 +7,7 @@ export default function Home() {
     // here below will be all the sections
     <section className="section">
       <Container>
+        <Button>Записаться на консультацию</Button>
         <h1 className="text-ui_light_16">Це секція приклад Roboto 16px 300</h1>
         <h1 className="font-ui_kurier text-ui_bold_20">
           It is an example section 20px 700 Kurier
