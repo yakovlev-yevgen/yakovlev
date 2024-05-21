@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 import localFont from 'next/font/local';
 
-import { Footer } from '@/layout/Footer/Footer';
+import { Footer } from '@/layout/Footer';
 
 import './globals.css';
 
