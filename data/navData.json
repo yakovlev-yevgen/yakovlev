@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Обо мне",
+    "href": "about"
+  },
+  {
+    "title": "Услуги и цены",
+    "href": "services"
+  },
+  {
+    "title": "Отзывы",
+    "href": "reviews"
+  },
+  {
+    "title": "Обратная связь",
+    "href": "feedback"
+  }
+]
