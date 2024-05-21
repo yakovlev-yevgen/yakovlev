@@ -4,6 +4,8 @@ import { Container } from '@/components/ui-kit/Container';
 import { Logo } from '@/components/ui-kit/Logo';
 import { SectionTitle } from '@/components/ui-kit/SectionTitle';
 import { Socials } from '@/components/modules/Socials';
+import { Contact } from '@/components/ui-kit/Contact';
+import contact from '@/data/contact.json';
 
 export default function Home() {
   return (
@@ -57,6 +59,8 @@ export default function Home() {
           <NavBar section="header" />
           <p className="text-ui_accent_transparent_40">FOOTER NavBar:</p>
           <NavBar section="footer" />
+          <p className="text-ui_accent_transparent_40">CONTACT:</p>
+          <Contact phoneNumber={contact.phoneNumber} />
         </Container>
       </section>
 
@@ -75,8 +79,6 @@ export default function Home() {
       <section className="h-[800px] bg-orange-500" id="contact">
         <p>EXAMPLE FORM</p>
       </section>
-
-      <div className="h-10 bg-ui_light">space</div>
     </>
   );
 }
