@@ -10,6 +10,7 @@ import {
 } from '@headlessui/react';
 
 import { ICONS } from '@/components/ui-kit/Icons';
+import common from 'data/common.json';
 
 type BaseModalProps = {
   isOpen: boolean;
@@ -36,7 +37,7 @@ export const BaseModal: React.FC<BaseModalProps> = ({
     <Transition appear show={isOpen} as={Fragment}>
       <Dialog
         as="div"
-        className={cn('relative z-10', dialogClassName)}
+        className={cn('relative z-40', dialogClassName)}
         onClose={closeModal}
       >
         <TransitionChild
@@ -68,6 +69,8 @@ export const BaseModal: React.FC<BaseModalProps> = ({
                 <div className={cn('relative h-full', containerClassName)}>
                   {children}
                   <button
+                    type="button"
+                    aria-label={common.modals.closeAria}
                     onClick={closeModal}
                     className={cn(
                       'w-[50px] h-[50px] absolute flex items-center justify-center',

@@ -9,11 +9,13 @@ import navData from 'data/navData.json';
 type NavBarProps = {
   section: 'header' | 'footer' | 'menu';
   listClassName?: string;
+  closeMenuFunction?: () => void | undefined;
 };
 
 export const NavBar: React.FC<NavBarProps> = ({
   listClassName = '',
   section,
+  closeMenuFunction,
 }) => {
   return (
     <ul
@@ -37,6 +39,7 @@ export const NavBar: React.FC<NavBarProps> = ({
             dataLink={dataLink}
             withLines={section !== 'menu'}
             textAlignCenter={section === 'footer'}
+            handleClick={closeMenuFunction && closeMenuFunction}
           />
         );
       })}

@@ -6,6 +6,7 @@ import cn from 'classnames';
 import { MobileMenu } from '@/components/modules/MobileMenu';
 
 import { ICONS } from '../Icons';
+import common from 'data/common.json';
 
 type BurgerButtonProps = {
   className?: string;
@@ -16,23 +17,24 @@ export const BurgerButton: React.FC<BurgerButtonProps> = ({
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  function closeMenu() {
-    setIsMenuOpen(false);
+  function toggleMenu() {
+    setIsMenuOpen(!isMenuOpen);
   }
 
-  function openMenu() {
-    setIsMenuOpen(true);
+  function closeMenu() {
+    setIsMenuOpen(false);
   }
 
   return (
     <>
       <button
         type="button"
-        onClick={openMenu}
+        onClick={toggleMenu}
         className={cn(
-          'w-10 h-10 flex items-center justify-center cursor-pointer',
+          'w-10 h-10 flex items-center justify-center cursor-pointer transition-colors duration-250 text-ui_accent hocus:text-ui_light',
           className,
         )}
+        aria-label={common.menu.burgerAria}
       >
         <ICONS.BURGER className="w-8 h-5" />
       </button>

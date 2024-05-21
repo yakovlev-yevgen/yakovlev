@@ -59,14 +59,22 @@ export default function Home() {
           <NavBar section="footer" />
         </Container>
       </section>
-      {/*
+
       <section className="h-[800px] bg-red-500" id="about">
         <p>EXAMPLE ABOUT</p>
       </section>
 
-      <section className="h-[800px] bg-orange-500" id="feedback">
+      <section className="h-[800px] bg-blue-500" id="services">
+        <p>EXAMPLE SERVICES</p>
+      </section>
+
+      <section className="h-[800px] bg-green-500" id="reviews">
+        <p>EXAMPLE REVIEWS</p>
+      </section>
+
+      <section className="h-[800px] bg-orange-500" id="contact">
         <p>EXAMPLE FORM</p>
-      </section> */}
+      </section>
 
       <div className="h-10 bg-ui_light">space</div>
     </>

@@ -46,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body
-        className={`${kurier.variable} ${roboto.className} flex flex-col justify-start h-screen`}
+        className={`${kurier.variable} ${roboto.className} flex flex-col justify-start h-screen pt-[60px]`}
       >
         <Header />
         <main>{children}</main>
