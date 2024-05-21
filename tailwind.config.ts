@@ -54,6 +54,10 @@ const config: Config = {
         ui_kurier: ['var(--font-kurier)'],
       },
 
+      transitionDuration: {
+        '250': '250ms',
+      },
+
       fontSize: {
         // light_14 - 300 14px 1.2 (1.2 у нас за замовч.)
         // reg_16 - 400 16px 1.2
