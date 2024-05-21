@@ -8,9 +8,9 @@ import { DataLinkType } from './types';
 
 type NavItemProps = {
   dataLink: DataLinkType;
-  // handleClick: () => void;
   withLines: boolean;
   textAlignCenter: boolean;
+  handleClick?: () => void | undefined;
   className?: string;
 };
 
@@ -19,7 +19,7 @@ export const NavItem: React.FC<NavItemProps> = ({
   withLines,
   textAlignCenter,
   className = '',
-  // handleClick,
+  handleClick,
 }) => {
   return (
     <li
@@ -33,7 +33,7 @@ export const NavItem: React.FC<NavItemProps> = ({
       )}
     >
       <LinkScroll
-        // onClick={() => handleClick && handleClick()}
+        onClick={() => handleClick && handleClick()}
         smooth={true}
         offset={0}
         duration={500}

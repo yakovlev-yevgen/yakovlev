@@ -5,6 +5,8 @@ import IconPLus from '@/public/icons/plus.svg';
 import IconMinus from '@/public/icons/minus.svg';
 import IconFavicon from '@/public/icons/favicon.svg';
 import IconLogo from '@/public/icons/logo.svg';
+import IconBurger from '@/public/icons/burger.svg';
+import IconClose from '@/public/icons/close.svg';
 
 export const ICONS = {
   INSTAGRAM: IconInstagram,
@@ -14,6 +16,8 @@ export const ICONS = {
   MINUS: IconMinus,
   FAVICON: IconFavicon,
   LOGO: IconLogo,
+  BURGER: IconBurger,
+  CLOSE: IconClose,
 };
 
 export type IconName = keyof typeof ICONS;

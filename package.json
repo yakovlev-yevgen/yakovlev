@@ -15,6 +15,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@headlessui/react": "^2.0.3",
     "@svgr/webpack": "^8.1.0",
     "@types/react-scroll": "^1.8.10",
     "classnames": "^2.5.1",
