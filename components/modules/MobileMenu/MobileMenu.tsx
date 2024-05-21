@@ -6,6 +6,7 @@ import { BaseModal } from '@/components/ui-kit/BaseModal';
 import { NavBar } from '../NavBar';
 import { Socials } from '../Socials';
 import { Logo } from '@/components/ui-kit/Logo';
+import { Contact } from '@/components/ui-kit/Contact';
 
 import { ICONS } from '../../ui-kit/Icons';
 import common from 'data/common.json';
@@ -29,14 +30,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
       closeBtnClassName="hidden"
     >
       <div className="w-full flex justify-between items-center mb-[60px] md:mb-[70px] h-10">
-        <a
-          href=""
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-ui_light cursor-pointer w-10 h-10"
-        >
-          кнопка тел
-        </a>
+        <Contact phoneNumber={common.contacts.phoneNumber} />
 
         <Logo />
 

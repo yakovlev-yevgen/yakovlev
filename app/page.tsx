@@ -5,7 +5,7 @@ import { Logo } from '@/components/ui-kit/Logo';
 import { SectionTitle } from '@/components/ui-kit/SectionTitle';
 import { Socials } from '@/components/modules/Socials';
 import { Contact } from '@/components/ui-kit/Contact';
-import contact from '@/data/contact.json';
+import common from '@/data/common.json';
 
 export default function Home() {
   return (
@@ -60,7 +60,7 @@ export default function Home() {
           <p className="text-ui_accent_transparent_40">FOOTER NavBar:</p>
           <NavBar section="footer" />
           <p className="text-ui_accent_transparent_40">CONTACT:</p>
-          <Contact phoneNumber={contact.phoneNumber} />
+          <Contact phoneNumber={common.contacts.phoneNumber} />
         </Container>
       </section>
 

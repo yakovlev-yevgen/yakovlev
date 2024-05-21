@@ -5,6 +5,9 @@ import { Container } from '@/components/ui-kit/Container';
 import { Logo } from '@/components/ui-kit/Logo';
 import { NavBar } from '@/components/modules/NavBar';
 import { BurgerButton } from '@/components/ui-kit/BurgerButton';
+import { Contact } from '@/components/ui-kit/Contact';
+
+import common from 'data/common.json';
 
 type HeaderProps = {
   className?: string;
@@ -22,15 +25,10 @@ export const Header: React.FC<HeaderProps> = ({ className = '' }) => {
         <BurgerButton className="xl:hidden" />
 
         <Logo />
+
         <NavBar section="header" />
-        <a
-          href=""
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-ui_light w-10 cursor-pointer"
-        >
-          кнопка тел
-        </a>
+
+        <Contact phoneNumber={common.contacts.phoneNumber} />
       </Container>
     </header>
   );
