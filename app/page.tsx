@@ -1,4 +1,5 @@
 import { NavBar } from '@/components/modules/NavBar';
+import { Button } from '@/components/ui-kit/Button/Button';
 import { Container } from '@/components/ui-kit/Container';
 import { Logo } from '@/components/ui-kit/Logo';
 import { SectionTitle } from '@/components/ui-kit/SectionTitle';
@@ -10,6 +11,7 @@ export default function Home() {
     <>
       <section className="section bg-ui_dark">
         <Container>
+          <Button>Записаться на консультацию</Button>
           <h1 className="text-ui_light_16">
             Це секція приклад Roboto 16px 300
           </h1>
