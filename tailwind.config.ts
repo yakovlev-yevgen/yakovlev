@@ -17,7 +17,7 @@ const config: Config = {
       // xsOnly: { max: '479.98px' },
       smOnly: { max: '767.98px' },
       mdOnly: { min: '768px', max: '1279.98px' },
-      // notXl: { max: '1279.98px' },
+      notXl: { max: '1279.98px' },
     },
     extend: {
       container: {
