@@ -67,6 +67,8 @@ export default function Home() {
       <section className="h-[800px] bg-orange-500" id="feedback">
         <p>EXAMPLE FORM</p>
       </section> */}
+
+      <div className="h-10 bg-ui_light">space</div>
     </>
   );
 }
