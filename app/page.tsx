@@ -1,5 +1,5 @@
 import { NavBar } from '@/components/modules/NavBar';
-import { Button } from '@/components/ui-kit/Button/Button';
+import { Button } from '@/components/ui-kit/Button';
 import { Container } from '@/components/ui-kit/Container';
 import { Logo } from '@/components/ui-kit/Logo';
 import { SectionTitle } from '@/components/ui-kit/SectionTitle';
@@ -59,7 +59,7 @@ export default function Home() {
           <NavBar section="footer" />
         </Container>
       </section>
-      {/* 
+      {/*
       <section className="h-[800px] bg-red-500" id="about">
         <p>EXAMPLE ABOUT</p>
       </section>
@@ -67,6 +67,8 @@ export default function Home() {
       <section className="h-[800px] bg-orange-500" id="feedback">
         <p>EXAMPLE FORM</p>
       </section> */}
+
+      <div className="h-10 bg-ui_light">space</div>
     </>
   );
 }

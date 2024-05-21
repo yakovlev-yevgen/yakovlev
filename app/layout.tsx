@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 import localFont from 'next/font/local';
 
+import { Footer } from '@/layout/Footer';
+
 import './globals.css';
 
 const roboto = Roboto({
@@ -42,8 +44,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={`${kurier.variable} ${roboto.className}`}>
+      <body
+        className={`${kurier.variable} ${roboto.className} flex flex-col justify-start h-screen`}
+      >
+        <header>header</header>
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
