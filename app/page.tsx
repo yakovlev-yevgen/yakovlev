@@ -6,6 +6,8 @@ import { SectionTitle } from '@/components/ui-kit/SectionTitle';
 import { Socials } from '@/components/modules/Socials';
 import { Contact } from '@/components/ui-kit/Contact';
 import contact from '@/data/contact.json';
+import { Accordion } from '@/components/modules/Accordion';
+import faq from '@/data/faq.json';
 
 export default function Home() {
   return (
@@ -61,6 +63,8 @@ export default function Home() {
           <NavBar section="footer" />
           <p className="text-ui_accent_transparent_40">CONTACT:</p>
           <Contact phoneNumber={contact.phoneNumber} />
+          <p className="text-ui_accent_transparent_40 ">ACCORDION:</p>
+          <Accordion className="p-4 bg-ui_light" items={faq} />
         </Container>
       </section>
       {/*
