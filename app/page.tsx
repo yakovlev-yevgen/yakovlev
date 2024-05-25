@@ -1,3 +1,7 @@
+'use client';
+
+import { useState } from 'react';
+
 import { NavBar } from '@/components/modules/NavBar';
 import { Button } from '@/components/ui-kit/Button';
 import { Container } from '@/components/ui-kit/Container';
@@ -5,9 +9,16 @@ import { Logo } from '@/components/ui-kit/Logo';
 import { SectionTitle } from '@/components/ui-kit/SectionTitle';
 import { Socials } from '@/components/modules/Socials';
 import { Contact } from '@/components/ui-kit/Contact';
+import { FormModal } from '@/components/modules/FormModal';
 import common from '@/data/common.json';
+import feedbackForm from '@/data/feedbackForm.json';
 
 export default function Home() {
+  const [isModalSuccessOpen, setIsModalSuccessOpen] = useState(false);
+  const [isModalFailedOpen, setIsModalFailedOpen] = useState(false);
+
+  console.log(isModalFailedOpen);
+
   return (
     // here below will be all the sections
     <>
@@ -63,22 +74,39 @@ export default function Home() {
           <Contact phoneNumber={common.contacts.phoneNumber} />
         </Container>
       </section>
-
       <section className="h-[800px] bg-red-500" id="about">
         <p>EXAMPLE ABOUT</p>
       </section>
-
       <section className="h-[800px] bg-blue-500" id="services">
         <p>EXAMPLE SERVICES</p>
       </section>
-
       <section className="h-[800px] bg-green-500" id="reviews">
         <p>EXAMPLE REVIEWS</p>
       </section>
-
       <section className="h-[800px] bg-orange-500" id="contact">
         <p>EXAMPLE FORM</p>
       </section>
+
+      <button type="button" onClick={() => setIsModalSuccessOpen(true)}>
+        Відкрити модалку успіху
+      </button>
+      <button type="button" onClick={() => setIsModalFailedOpen(true)}>
+        Відкрити модалку невдачі
+      </button>
+
+      <FormModal
+        isModalOpen={isModalSuccessOpen}
+        closeModal={() => setIsModalSuccessOpen(false)}
+        title={feedbackForm.successModal.title}
+        details={feedbackForm.successModal.details}
+      />
+
+      <FormModal
+        isModalOpen={isModalFailedOpen}
+        closeModal={() => setIsModalFailedOpen(false)}
+        title={feedbackForm.failedModal.title}
+        details={feedbackForm.failedModal.details}
+      />
     </>
   );
 }
