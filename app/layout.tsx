@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 import localFont from 'next/font/local';
 
+import { Header } from '@/layout/Header';
 import { Footer } from '@/layout/Footer';
 
 import './globals.css';
@@ -45,9 +46,9 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body
-        className={`${kurier.variable} ${roboto.className} flex flex-col justify-start h-screen`}
+        className={`${kurier.variable} ${roboto.className} flex flex-col justify-start h-screen pt-[60px]`}
       >
-        <header>header</header>
+        <Header />
         <main>{children}</main>
         <Footer />
       </body>
