@@ -7,7 +7,7 @@ import { ICONS } from '@/components/ui-kit/Icons';
 type AccordionItem = {
   id: string;
   title: string;
-  description: string;
+  description: string[];
 };
 
 type AccordionProps = {
@@ -109,14 +109,19 @@ export const Accordion: FC<AccordionProps> = ({ items, className }) => {
               className={cn(
                 'itemContent box-content overflow-hidden  bg-ui_light transition-[max-height] duration-250',
                 {
-                  'border-l border-r border-b border-ui_accent_transparent_30 rounded-bl-2xl rounded-br-2xl':
+                  'p-4 border-l border-r border-b border-ui_accent_transparent_30 rounded-bl-2xl rounded-br-2xl':
                     isActive,
                 },
               )}
             >
-              <p className="p-4 text-ui_light_14 md:text-ui_light_16">
-                {description}
-              </p>
+              {description.map(string => (
+                <p
+                  key={string}
+                  className="mb-2 last:mb-0 text-ui_light_14 md:text-ui_light_16 whitespace-break-spaces"
+                >
+                  {string}
+                </p>
+              ))}
             </div>
           </li>
         );
