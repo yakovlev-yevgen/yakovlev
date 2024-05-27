@@ -10,6 +10,7 @@ import { SectionTitle } from '@/components/ui-kit/SectionTitle';
 import { Socials } from '@/components/modules/Socials';
 import { Contact } from '@/components/ui-kit/Contact';
 import { FormModal } from '@/components/modules/FormModal';
+import { Form } from '@/components/modules/Form';
 import { Accordion } from '@/components/modules/Accordion';
 import common from '@/data/common.json';
 import feedbackForm from '@/data/feedbackForm.json';
@@ -89,6 +90,9 @@ export default function Home() {
       </section>
       <section className="h-[800px] bg-orange-500" id="contact">
         <p>EXAMPLE FORM</p>
+        <Container>
+          <Form className="bg-ui_light" />
+        </Container>
       </section>
 
       <Button type="button" handleClick={() => setIsModalSuccessOpen(true)}>

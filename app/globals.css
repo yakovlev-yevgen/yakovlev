@@ -9,3 +9,38 @@ body {
 .section {
   @apply py-10 md:py-[50px] xl:py-[60px];
 }
+
+/* FORM STYLES */
+.field {
+  @apply w-full min-h-[55px] px-4 text-ui_light_16 rounded-2xl border border-ui_accent bg-transparent placeholder:text-ui_dark_transparent_50;
+}
+
+.error {
+  @apply absolute inline-block bottom-0 left-0 md:left-4 text-ui_red text-ui_light_14 md:text-ui_light_16 translate-y-full pt-1;
+}
+
+/* REACT-PHONE-INPUT-2 */
+.flag {
+  @apply scale-x-[2] scale-y-[1.6] left-[26px];
+}
+
+.react-tel-input .selected-flag {
+  @apply !w-[90px];
+}
+
+.react-tel-input .selected-flag .arrow {
+  @apply !border-solid !border-l-[4px] !border-l-transparent !border-r-[4px] !border-r-transparent !border-t-[5px] !border-t-ui_dark_transparent_50;
+}
+
+.react-tel-input .selected-flag .arrow.up {
+  @apply !border-b-[5px] !border-t-transparent !border-b-ui_dark_transparent_50 !-translate-y-1/2;
+}
+
+.react-tel-input .selected-flag:focus:before,
+.react-tel-input .selected-flag.open:before {
+  @apply outline !shadow-none !rounded-tl-2xl !rounded-bl-2xl;
+}
+
+.country {
+  @apply !pl-14;
+}
