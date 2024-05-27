@@ -6,6 +6,7 @@ type ServiceCardProps = {
   priceOneSession: number;
   priceFiveSessions: number;
   imageUrl: string;
+  description: string;
 };
 
 export const ServiceCard: React.FC<ServiceCardProps> = ({
@@ -13,15 +14,16 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
   priceFiveSessions,
   priceOneSession,
   imageUrl,
+  description,
 }) => {
   const {
     cardsData: { firstParagraph, secondParagraph, currency },
   } = servicesData;
 
   return (
-    <div className="">
+    <div className="w-[345px] md:w-[302px] xl:w-[400px]">
       <div
-        className={`rounded-[16px] p-5 w-[275px] h-[225px] xl:w-[400px] xl:h-[356px]`}
+        className={`rounded-[16px] p-5 w-[275px] h-[225px] xl:w-[400px] xl:h-[356px] mb-2 xl:mb-5 mx-auto`}
         style={{ backgroundImage: `url(${imageUrl})` }}
       >
         <div className="flex flex-col items-center justify-between p-5 xl:py-[60px] xl:px-[14px] w-full h-full border border-ui_light rounded-[16px]">
@@ -39,6 +41,10 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
           </div>
         </div>
       </div>
+
+      <p className="text-ui_light_14 xl:text-ui_light_16 text-center">
+        {description}
+      </p>
     </div>
   );
 };

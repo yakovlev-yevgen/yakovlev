@@ -31,6 +31,7 @@ export default function Home() {
         priceFiveSessions={100}
         priceOneSession={50}
         imageUrl="https://armyinform.com.ua/wp-content/uploads/2023/12/1-100-e1703144488424.jpg"
+        description="Использование гипноза для лечения и облегчения психологических травм, а также поиска причин текущих эмоциональных и физических проблем."
       />
 
       <section className="section bg-ui_dark">
