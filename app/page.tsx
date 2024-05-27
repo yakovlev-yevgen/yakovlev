@@ -6,11 +6,19 @@ import { SectionTitle } from '@/components/ui-kit/SectionTitle';
 import { Socials } from '@/components/modules/Socials';
 import { Contact } from '@/components/ui-kit/Contact';
 import common from '@/data/common.json';
+import { ServiceCard } from '@/components/ui-kit/ServiceCard';
 
 export default function Home() {
   return (
     // here below will be all the sections
     <>
+      <ServiceCard
+        title="Гипнотерапия"
+        priceFiveSessions={100}
+        priceOneSession={50}
+        imageUrl="https://armyinform.com.ua/wp-content/uploads/2023/12/1-100-e1703144488424.jpg"
+      />
+
       <section className="section bg-ui_dark">
         <Container>
           <Button>Записаться на консультацию</Button>
