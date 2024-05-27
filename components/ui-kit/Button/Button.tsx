@@ -4,6 +4,7 @@ import cn from 'classnames';
 type ButtonProps = {
   children: React.ReactNode;
   type?: 'button' | 'submit';
+  handleClick?: () => void;
   disabled?: boolean;
   className?: string;
 };
@@ -11,8 +12,11 @@ type ButtonProps = {
 export const Button: React.FC<ButtonProps> = ({
   children,
   type = 'button',
+  handleClick = () => {
+    return;
+  },
   disabled = false,
-  className,
+  className = '',
 }) => {
   return (
     <button
@@ -25,6 +29,7 @@ export const Button: React.FC<ButtonProps> = ({
         className,
       )}
       type={type}
+      onClick={handleClick}
       disabled={disabled}
     >
       {children}
