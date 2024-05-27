@@ -10,8 +10,10 @@ import { SectionTitle } from '@/components/ui-kit/SectionTitle';
 import { Socials } from '@/components/modules/Socials';
 import { Contact } from '@/components/ui-kit/Contact';
 import { FormModal } from '@/components/modules/FormModal';
+import { Accordion } from '@/components/modules/Accordion';
 import common from '@/data/common.json';
 import feedbackForm from '@/data/feedbackForm.json';
+import faq from '@/data/faq.json';
 
 export default function Home() {
   const [isModalSuccessOpen, setIsModalSuccessOpen] = useState(false);
@@ -72,6 +74,8 @@ export default function Home() {
           <NavBar section="footer" />
           <p className="text-ui_accent_transparent_40">CONTACT:</p>
           <Contact phoneNumber={common.contacts.phoneNumber} />
+          <p className="text-ui_accent_transparent_40 ">ACCORDION:</p>
+          <Accordion className="p-4 bg-ui_light" items={faq} />
         </Container>
       </section>
       <section className="h-[800px] bg-red-500" id="about">
@@ -87,12 +91,12 @@ export default function Home() {
         <p>EXAMPLE FORM</p>
       </section>
 
-      <button type="button" onClick={() => setIsModalSuccessOpen(true)}>
+      <Button type="button" handleClick={() => setIsModalSuccessOpen(true)}>
         Відкрити модалку успіху
-      </button>
-      <button type="button" onClick={() => setIsModalFailedOpen(true)}>
+      </Button>
+      <Button type="button" handleClick={() => setIsModalFailedOpen(true)}>
         Відкрити модалку невдачі
-      </button>
+      </Button>
 
       <FormModal
         isModalOpen={isModalSuccessOpen}
