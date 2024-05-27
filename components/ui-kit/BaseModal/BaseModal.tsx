@@ -73,11 +73,11 @@ export const BaseModal: React.FC<BaseModalProps> = ({
                     aria-label={common.modals.closeAria}
                     onClick={closeModal}
                     className={cn(
-                      'w-[50px] h-[50px] absolute flex items-center justify-center',
+                      'w-[50px] h-[50px] absolute flex items-center justify-center text-ui_accent',
                       closeBtnClassName,
                     )}
                   >
-                    <ICONS.CLOSE className="w-4 h-4 fill-ui_accent" />
+                    <ICONS.CLOSE className="w-4 h-4 fill-current" />
                   </button>
                 </div>
               </DialogPanel>
