@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 
+import { Hero } from '@/sections/Hero';
+
 import { NavBar } from '@/components/modules/NavBar';
 import { Button } from '@/components/ui-kit/Button';
 import { Container } from '@/components/ui-kit/Container';
@@ -12,6 +14,7 @@ import { Contact } from '@/components/ui-kit/Contact';
 import { FormModal } from '@/components/modules/FormModal';
 import { Form } from '@/components/modules/Form';
 import { Accordion } from '@/components/modules/Accordion';
+
 import common from '@/data/common.json';
 import feedbackForm from '@/data/feedbackForm.json';
 import faq from '@/data/faq.json';
@@ -20,11 +23,10 @@ export default function Home() {
   const [isModalSuccessOpen, setIsModalSuccessOpen] = useState(false);
   const [isModalFailedOpen, setIsModalFailedOpen] = useState(false);
 
-  console.log(isModalFailedOpen);
-
   return (
     // here below will be all the sections
     <>
+      <Hero />
       <section className="section bg-ui_dark">
         <Container>
           <Button>Записаться на консультацию</Button>
