@@ -1,22 +1,18 @@
-import { NavBar } from '@/components/modules/NavBar';
-import { Button } from '@/components/ui-kit/Button';
+import { Hero } from '@/sections/Hero';
+
 import { Container } from '@/components/ui-kit/Container';
-import { Logo } from '@/components/ui-kit/Logo';
-import { SectionTitle } from '@/components/ui-kit/SectionTitle';
-import { Socials } from '@/components/modules/Socials';
-import { Contact } from '@/components/ui-kit/Contact';
 import { Form } from '@/components/modules/Form';
 import { Accordion } from '@/components/modules/Accordion';
 import { PrinciplesList } from '@/components/modules/PrinciplesList';
 import { ServiceCard } from '@/components/ui-kit/ServiceCard';
 
-import common from '@/data/common.json';
 import faq from '@/data/faq.json';
 
 export default function Home() {
   return (
     // here below will be all the sections
     <>
+      <Hero />
       <PrinciplesList />
       <ServiceCard
         title="Гипнотерапия"
@@ -28,8 +24,9 @@ export default function Home() {
 
       <section className="section bg-ui_dark">
         <Container>
-          <Button>Записаться на консультацию</Button>
-          <h1 className="text-ui_light_16">
+          {/* <Button>Записаться на консультацию</Button> */}
+
+          {/* <h1 className="text-ui_light_16">
             Це секція приклад Roboto 16px 300
           </h1>
           <h1 className="font-ui_kurier text-ui_bold_20">
@@ -37,49 +34,53 @@ export default function Home() {
           </h1>
           <h1 className="font-ui_kurier text-ui_reg_20">
             Це секція приклад 20px 400 Kurier
-          </h1>
+          </h1> */}
 
-          <SectionTitle
-            firstString="Подход"
-            secondString="к работе"
-            position="left"
-          />
-          <SectionTitle
-            firstString="Услуги"
-            secondString="и цены"
-            position="right"
-          />
-          <SectionTitle
-            firstString="Клиенты"
-            secondString="обо мне"
-            position="left"
-          />
-          <SectionTitle
-            firstString="Форма"
-            secondString="для связи"
-            position="right"
-          />
+          {/* <SectionTitle
+          firstString="Подход"
+          secondString="к работе"
+          position="left"
+        />
+        <SectionTitle
+          firstString="Услуги"
+          secondString="и цены"
+          position="right"
+        />
+        <SectionTitle
+          firstString="Клиенты"
+          secondString="обо мне"
+          position="left"
+        />
+        <SectionTitle
+          firstString="Форма"
+          secondString="для связи"
+          position="right"
+        /> */}
 
-          <Logo />
-          <p className="text-ui_accent_transparent_40">MENU SOCIALS:</p>
+          {/* <Logo /> */}
+
+          {/* <p className="text-ui_accent_transparent_40">MENU SOCIALS:</p>
           <Socials section="menu" />
           <p className="text-ui_accent_transparent_40">HERO SOCIALS:</p>
           <Socials section="hero" />
           <p className="text-ui_accent_transparent_40">FOOTER SOCIALS:</p>
-          <Socials section="footer" />
+          <Socials section="footer" /> */}
 
-          <p className="text-ui_accent_transparent_40">MENU NavBar:</p>
+          {/* <p className="text-ui_accent_transparent_40">MENU NavBar:</p>
           <NavBar section="menu" />
           <p className="text-ui_accent_transparent_40">HEADER NavBar:</p>
           <NavBar section="header" />
           <p className="text-ui_accent_transparent_40">FOOTER NavBar:</p>
-          <NavBar section="footer" />
+          <NavBar section="footer" /> */}
+          {/* 
           <p className="text-ui_accent_transparent_40">CONTACT:</p>
-          <Contact phoneNumber={common.contacts.phoneNumber} />
+          <Contact phoneNumber={common.contacts.phoneNumber} /> */}
+
           <p className="text-ui_accent_transparent_40 ">ACCORDION:</p>
           <Accordion className="p-4 bg-ui_light" items={faq} />
         </Container>
       </section>
+
       <section className="h-[800px] bg-red-500" id="about">
         <p>EXAMPLE ABOUT</p>
       </section>
