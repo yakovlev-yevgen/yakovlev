@@ -9,16 +9,18 @@ import navData from 'data/navData.json';
 type NavBarProps = {
   section: 'header' | 'footer' | 'menu';
   listClassName?: string;
+  closeMenuFunction?: () => void | undefined;
 };
 
 export const NavBar: React.FC<NavBarProps> = ({
   listClassName = '',
   section,
+  closeMenuFunction,
 }) => {
   return (
     <ul
       className={cn(
-        'w-fit flex gap-10',
+        'flex gap-10',
         { 'hidden xl:flex xl:gap-20 h-10': section === 'header' },
         {
           'mx-auto flex-col md:flex-row md:gap-20 xl:mx-0 md:h-10':
@@ -37,6 +39,7 @@ export const NavBar: React.FC<NavBarProps> = ({
             dataLink={dataLink}
             withLines={section !== 'menu'}
             textAlignCenter={section === 'footer'}
+            handleClick={closeMenuFunction && closeMenuFunction}
           />
         );
       })}
