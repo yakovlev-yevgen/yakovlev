@@ -1,7 +1,3 @@
-'use client';
-
-import { useState } from 'react';
-
 import { NavBar } from '@/components/modules/NavBar';
 import { Button } from '@/components/ui-kit/Button';
 import { Container } from '@/components/ui-kit/Container';
@@ -9,22 +5,19 @@ import { Logo } from '@/components/ui-kit/Logo';
 import { SectionTitle } from '@/components/ui-kit/SectionTitle';
 import { Socials } from '@/components/modules/Socials';
 import { Contact } from '@/components/ui-kit/Contact';
-import { FormModal } from '@/components/modules/FormModal';
 import { Form } from '@/components/modules/Form';
 import { Accordion } from '@/components/modules/Accordion';
+import { PrinciplesList } from '@/components/modules/PrinciplesList';
+
 import common from '@/data/common.json';
-import feedbackForm from '@/data/feedbackForm.json';
 import faq from '@/data/faq.json';
 
 export default function Home() {
-  const [isModalSuccessOpen, setIsModalSuccessOpen] = useState(false);
-  const [isModalFailedOpen, setIsModalFailedOpen] = useState(false);
-
-  console.log(isModalFailedOpen);
-
   return (
     // here below will be all the sections
     <>
+      <PrinciplesList />
+
       <section className="section bg-ui_dark">
         <Container>
           <Button>Записаться на консультацию</Button>
@@ -94,27 +87,6 @@ export default function Home() {
           <Form className="bg-ui_light" />
         </Container>
       </section>
-
-      <Button type="button" handleClick={() => setIsModalSuccessOpen(true)}>
-        Відкрити модалку успіху
-      </Button>
-      <Button type="button" handleClick={() => setIsModalFailedOpen(true)}>
-        Відкрити модалку невдачі
-      </Button>
-
-      <FormModal
-        isModalOpen={isModalSuccessOpen}
-        closeModal={() => setIsModalSuccessOpen(false)}
-        title={feedbackForm.successModal.title}
-        details={feedbackForm.successModal.details}
-      />
-
-      <FormModal
-        isModalOpen={isModalFailedOpen}
-        closeModal={() => setIsModalFailedOpen(false)}
-        title={feedbackForm.failedModal.title}
-        details={feedbackForm.failedModal.details}
-      />
     </>
   );
 }

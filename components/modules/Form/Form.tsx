@@ -15,7 +15,7 @@ import { Button } from '@/components/ui-kit/Button';
 import { formValidationSchema } from '@/utils/formValidationSchema';
 import { sendFormDataToChat } from '@/utils/sendFormDataToChat';
 
-import { formTxt, successModal, failedModal } from '@/data/feedbackForm.json';
+import feedbackForm from '@/data/feedbackForm.json';
 
 export type FormInputsType = {
   name: string;
@@ -30,6 +30,8 @@ export const Form = ({ className = '' }) => {
 
   const STORAGE_KEY = 'feedbackForm';
   const schema = formValidationSchema();
+
+  const { formTxt, successModal, failedModal } = feedbackForm;
 
   const {
     control,
