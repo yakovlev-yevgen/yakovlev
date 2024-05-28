@@ -8,6 +8,7 @@ import { Contact } from '@/components/ui-kit/Contact';
 import { Form } from '@/components/modules/Form';
 import { Accordion } from '@/components/modules/Accordion';
 import { PrinciplesList } from '@/components/modules/PrinciplesList';
+import { ServiceCard } from '@/components/ui-kit/ServiceCard';
 
 import common from '@/data/common.json';
 import faq from '@/data/faq.json';
@@ -17,6 +18,13 @@ export default function Home() {
     // here below will be all the sections
     <>
       <PrinciplesList />
+      <ServiceCard
+        title="Гипнотерапия"
+        priceFiveSessions={100}
+        priceOneSession={50}
+        imageUrl="https://armyinform.com.ua/wp-content/uploads/2023/12/1-100-e1703144488424.jpg"
+        description="Использование гипноза для лечения и облегчения психологических травм, а также поиска причин текущих эмоциональных и физических проблем."
+      />
 
       <section className="section bg-ui_dark">
         <Container>
