@@ -13,7 +13,7 @@ export const About: React.FC = () => {
   } = about;
 
   return (
-    <section className="section bg-ui_light">
+    <section className="section bg-ui_light" id="about">
       <Container>
         <SectionTitle
           firstString={firstString}
