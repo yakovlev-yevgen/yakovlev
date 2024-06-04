@@ -5,6 +5,7 @@ import { Container } from '@/components/ui-kit/Container';
 import { Form } from '@/components/modules/Form';
 import { PrinciplesList } from '@/components/modules/PrinciplesList';
 import { ServiceCard } from '@/components/ui-kit/ServiceCard';
+import { Ticker } from '@/components/modules/Ticker';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <About />
 
+      <Ticker />
       <PrinciplesList />
       <ServiceCard
         title="Гипнотерапия"
