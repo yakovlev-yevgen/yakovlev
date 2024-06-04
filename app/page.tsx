@@ -7,12 +7,15 @@ import { PrinciplesList } from '@/components/modules/PrinciplesList';
 import { ServiceCard } from '@/components/ui-kit/ServiceCard';
 
 import faq from '@/data/faq.json';
+import { Ticker } from '@/components/modules/Ticker';
 
 export default function Home() {
   return (
     // here below will be all the sections
     <>
       <Hero />
+      <Ticker />
+
       <PrinciplesList />
       <ServiceCard
         title="Гипнотерапия"
