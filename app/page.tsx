@@ -1,19 +1,21 @@
 import { Hero } from '@/sections/Hero';
+import { About } from '@/sections/About';
 
 import { Container } from '@/components/ui-kit/Container';
 import { Form } from '@/components/modules/Form';
-import { Accordion } from '@/components/modules/Accordion';
 import { PrinciplesList } from '@/components/modules/PrinciplesList';
 import { ServiceCard } from '@/components/ui-kit/ServiceCard';
+import { Ticker } from '@/components/modules/Ticker';
 import { Slider } from '@/components/ui-kit/Slider';
-
-import faq from '@/data/faq.json';
 
 export default function Home() {
   return (
     // here below will be all the sections
     <>
       <Hero />
+      <About />
+
+      <Ticker />
       <PrinciplesList />
       <ServiceCard
         title="Гипнотерапия"
@@ -23,71 +25,6 @@ export default function Home() {
         description="Использование гипноза для лечения и облегчения психологических травм, а также поиска причин текущих эмоциональных и физических проблем."
       />
 
-      <section className="section bg-ui_dark">
-        <Container>
-          {/* <Button>Записаться на консультацию</Button> */}
-
-          {/* <h1 className="text-ui_light_16">
-            Це секція приклад Roboto 16px 300
-          </h1>
-          <h1 className="font-ui_kurier text-ui_bold_20">
-            It is an example section 20px 700 Kurier
-          </h1>
-          <h1 className="font-ui_kurier text-ui_reg_20">
-            Це секція приклад 20px 400 Kurier
-          </h1> */}
-
-          {/* <SectionTitle
-          firstString="Подход"
-          secondString="к работе"
-          position="left"
-        />
-        <SectionTitle
-          firstString="Услуги"
-          secondString="и цены"
-          position="right"
-        />
-        <SectionTitle
-          firstString="Клиенты"
-          secondString="обо мне"
-          position="left"
-        />
-        <SectionTitle
-          firstString="Форма"
-          secondString="для связи"
-          position="right"
-        /> */}
-
-          {/* <Logo /> */}
-
-          {/* <p className="text-ui_accent_transparent_40">MENU SOCIALS:</p>
-          <Socials section="menu" />
-          <p className="text-ui_accent_transparent_40">HERO SOCIALS:</p>
-          <Socials section="hero" />
-          <p className="text-ui_accent_transparent_40">FOOTER SOCIALS:</p>
-          <Socials section="footer" /> */}
-
-          {/* <p className="text-ui_accent_transparent_40">MENU NavBar:</p>
-          <NavBar section="menu" />
-          <p className="text-ui_accent_transparent_40">HEADER NavBar:</p>
-          <NavBar section="header" />
-          <p className="text-ui_accent_transparent_40">FOOTER NavBar:</p>
-          <NavBar section="footer" /> */}
-          {/*
-          <p className="text-ui_accent_transparent_40">CONTACT:</p>
-          <Contact phoneNumber={common.contacts.phoneNumber} /> */}
-          <p className="text-ui_accent_transparent_40 ">SLIDER:</p>
-          <Slider className="bg-ui_light">
-            <div className="w-40 h-40 bg-blue-600 m-auto"></div>
-            <div className="w-40 h-40 bg-red-600 m-auto"></div>
-            <div className="w-40 h-40 bg-green-600 m-auto"></div>
-          </Slider>
-
-          <p className="text-ui_accent_transparent_40 ">ACCORDION:</p>
-          <Accordion className="p-4 bg-ui_light" items={faq} />
-        </Container>
-      </section>
-
       <section className="h-[800px] bg-red-500" id="about">
         <p>EXAMPLE ABOUT</p>
       </section>
@@ -96,6 +33,12 @@ export default function Home() {
       </section>
       <section className="h-[800px] bg-green-500" id="reviews">
         <p>EXAMPLE REVIEWS</p>
+        <p className="text-ui_accent_transparent_40 ">SLIDER:</p>
+        <Slider className="bg-ui_light">
+          <div className="w-40 h-40 bg-blue-600 m-auto"></div>
+          <div className="w-40 h-40 bg-red-600 m-auto"></div>
+          <div className="w-40 h-40 bg-green-600 m-auto"></div>
+        </Slider>
       </section>
       <section className="h-[800px] bg-orange-500" id="contact">
         <p>EXAMPLE FORM</p>

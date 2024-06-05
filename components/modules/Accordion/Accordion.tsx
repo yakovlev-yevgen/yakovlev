@@ -27,30 +27,30 @@ export const Accordion: FC<AccordionProps> = ({ items, className }) => {
       setActiveIndex(index);
     }
 
-    const title = itemRef?.current?.children[index];
-    const initialTopOffset = title?.getBoundingClientRect().top;
-    let startTime: number;
+    // const title = itemRef?.current?.children[index];
+    // const initialTopOffset = title?.getBoundingClientRect().top;
+    // let startTime: number;
 
-    function scrollToTopAnimation(currentTime: number) {
-      if (!startTime) startTime = currentTime;
+    // function scrollToTopAnimation(currentTime: number) {
+    //   if (!startTime) startTime = currentTime;
 
-      let elapsedTime = currentTime - startTime;
+    //   let elapsedTime = currentTime - startTime;
 
-      if (elapsedTime <= 250) {
-        /* 250ms transition*/
-        const currentTopOffset = title?.getBoundingClientRect().top;
-        let offset: number;
-        if (currentTopOffset && initialTopOffset) {
-          offset = currentTopOffset - initialTopOffset;
-          scrollBy(0, offset);
-        }
-        requestAnimationFrame(scrollToTopAnimation);
-      }
-    }
+    //   if (elapsedTime <= 250) {
+    //     /* 250ms transition*/
+    //     const currentTopOffset = title?.getBoundingClientRect().top;
+    //     let offset: number;
+    //     if (currentTopOffset && initialTopOffset) {
+    //       offset = currentTopOffset - initialTopOffset;
+    //       scrollBy(0, offset);
+    //     }
+    //     requestAnimationFrame(scrollToTopAnimation);
+    //   }
+    // }
 
-    if (index > activeIndex) {
-      requestAnimationFrame(scrollToTopAnimation);
-    }
+    // if (index > activeIndex) {
+    //   // requestAnimationFrame(scrollToTopAnimation);
+    // }
   };
 
   useEffect(() => {
@@ -107,10 +107,13 @@ export const Accordion: FC<AccordionProps> = ({ items, className }) => {
 
             <div
               className={cn(
-                'itemContent box-content overflow-hidden  bg-ui_light transition-[max-height] duration-250',
+                'itemContent box-content overflow-hidden bg-ui_light transition-all duration-250 px-4',
                 {
-                  'p-4 border-l border-r border-b border-ui_accent_transparent_30 rounded-bl-2xl rounded-br-2xl':
+                  'py-4 border-l border-r border-b border-ui_accent_transparent_30 rounded-bl-2xl rounded-br-2xl':
                     isActive,
+                },
+                {
+                  'py-0': !isActive,
                 },
               )}
             >
