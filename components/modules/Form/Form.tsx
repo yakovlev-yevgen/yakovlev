@@ -107,7 +107,7 @@ export const Form = ({ className = '' }) => {
           render={({ field }) => (
             <div className="relative">
               <PhoneInput
-                country={'ru'}
+                country={'md'}
                 localization={ru}
                 inputProps={{
                   className: 'field !pl-[106px]',
@@ -148,7 +148,7 @@ export const Form = ({ className = '' }) => {
         </Button>
       </form>
 
-      <p className="smOnly:w-[290px] mx-auto pb-20 text-ui_light_14 md:text-ui_light_16 md:whitespace-break-spaces">
+      <p className="smOnly:w-[290px] mx-auto mb-20 md:mb-8 text-ui_light_14 md:text-ui_light_16 md:whitespace-break-spaces">
         {formTxt.agreement}
       </p>
 
