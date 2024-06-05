@@ -25,7 +25,9 @@ export const Values: React.FC = () => {
       <SectionSubTitle className="xl:col-span-2">{subtitle}</SectionSubTitle>
 
       <div className="col-start-2">
-        <p className="text-ui_reg_16 xl:text-ui_reg_20 mb-2">{paragraphBold}</p>
+        <p className="text-ui_reg_16 xl:text-ui_reg_20 mb-2 xl:mb-5">
+          {paragraphBold}
+        </p>
 
         {paragraph.map((p, index) => (
           <p
