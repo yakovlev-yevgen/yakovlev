@@ -5,6 +5,7 @@ import { Feedback } from '@/sections/Feedback';
 import { PrinciplesList } from '@/components/modules/PrinciplesList';
 import { ServiceCard } from '@/components/ui-kit/ServiceCard';
 import { Ticker } from '@/components/modules/Ticker';
+import { Slider } from '@/components/ui-kit/Slider';
 
 export default function Home() {
   return (
@@ -29,6 +30,12 @@ export default function Home() {
       </section>
       <section className="h-[800px] bg-green-500" id="reviews">
         <p>EXAMPLE REVIEWS</p>
+        <p className="text-ui_accent_transparent_40 ">SLIDER:</p>
+        <Slider className="bg-ui_light">
+          <div className="w-40 h-40 bg-blue-600 m-auto"></div>
+          <div className="w-40 h-40 bg-red-600 m-auto"></div>
+          <div className="w-40 h-40 bg-green-600 m-auto"></div>
+        </Slider>
       </section>
     </>
   );
