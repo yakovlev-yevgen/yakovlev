@@ -8,9 +8,13 @@ import principles from 'data/aboutPrinciples.json';
 
 export const PrinciplesList: React.FC = () => {
   return (
-    <ul className="grid grid-cols-1 gap-y-[20px] xl:grid-rows-1 xl:grid-cols-3 xl:gap-x-[72px] w-fit mx-auto">
+    <ul className="grid grid-cols-1 gap-y-[20px] xl:grid-rows-1 xl:grid-cols-3 xl:gap-x-[72px] w-fit mx-auto mdOnly:hidden">
       {principles.principlesCards.map(el => {
-        return <PrincipleCard key={el.id} principle={el as PrincipleType} />;
+        return (
+          <li key={el.id}>
+            <PrincipleCard principle={el as PrincipleType} />
+          </li>
+        );
       })}
     </ul>
   );

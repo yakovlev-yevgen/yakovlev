@@ -9,26 +9,35 @@ import 'swiper/css/pagination';
 
 interface SliderProps {
   children: ReactNode[];
+  spaceBetween?: number;
   className?: string;
+  slideClassName?: string;
 }
 
-export const Slider: React.FC<SliderProps> = ({ children, className = '' }) => {
+export const Slider: React.FC<SliderProps> = ({
+  children,
+  className = '',
+  slideClassName = '',
+  spaceBetween = 20,
+}) => {
   return (
     <Swiper
       className={cn('sliderSwiper', className)}
       modules={[Autoplay, Pagination]}
-      spaceBetween={20}
-      slidesPerView={1}
+      spaceBetween={spaceBetween}
+      slidesPerView={2}
+      slidesPerGroup={3}
       pagination={{
         clickable: true,
       }}
-      loop={true}
       autoplay={{ delay: 5000 }}
       grabCursor={true}
-      lazyPreloadPrevNext={1}
+      lazyPreloadPrevNext={2}
     >
       {children.map((child, index) => (
-        <SwiperSlide key={index}>{child}</SwiperSlide>
+        <SwiperSlide key={index} className={slideClassName}>
+          {child}
+        </SwiperSlide>
       ))}
     </Swiper>
   );
