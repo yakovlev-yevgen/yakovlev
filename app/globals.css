@@ -44,3 +44,18 @@ body {
 .country {
   @apply !pl-14;
 }
+
+/* SWIPER */
+.sliderSwiper .swiper-wrapper {
+  padding-bottom: 30px;
+}
+.sliderSwiper .swiper-pagination {
+  bottom: -0px !important;
+}
+.sliderSwiper .swiper-pagination-bullet {
+  @apply w-[60px] h-[2px] rounded-sm bg-ui_accent_transparent_40 opacity-100;
+}
+
+.sliderSwiper .swiper-pagination-bullet-active {
+  @apply bg-ui_accent;
+}

@@ -5,6 +5,7 @@ import { Form } from '@/components/modules/Form';
 import { Accordion } from '@/components/modules/Accordion';
 import { PrinciplesList } from '@/components/modules/PrinciplesList';
 import { ServiceCard } from '@/components/ui-kit/ServiceCard';
+import { Slider } from '@/components/ui-kit/Slider';
 
 import faq from '@/data/faq.json';
 
@@ -72,9 +73,15 @@ export default function Home() {
           <NavBar section="header" />
           <p className="text-ui_accent_transparent_40">FOOTER NavBar:</p>
           <NavBar section="footer" /> */}
-          {/* 
+          {/*
           <p className="text-ui_accent_transparent_40">CONTACT:</p>
           <Contact phoneNumber={common.contacts.phoneNumber} /> */}
+          <p className="text-ui_accent_transparent_40 ">SLIDER:</p>
+          <Slider className="bg-ui_light">
+            <div className="w-40 h-40 bg-blue-600 m-auto"></div>
+            <div className="w-40 h-40 bg-red-600 m-auto"></div>
+            <div className="w-40 h-40 bg-green-600 m-auto"></div>
+          </Slider>
 
           <p className="text-ui_accent_transparent_40 ">ACCORDION:</p>
           <Accordion className="p-4 bg-ui_light" items={faq} />
