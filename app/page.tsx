@@ -1,8 +1,7 @@
 import { Hero } from '@/sections/Hero';
 import { About } from '@/sections/About';
+import { Feedback } from '@/sections/Feedback';
 
-import { Container } from '@/components/ui-kit/Container';
-import { Form } from '@/components/modules/Form';
 import { PrinciplesList } from '@/components/modules/PrinciplesList';
 import { ServiceCard } from '@/components/ui-kit/ServiceCard';
 import { Ticker } from '@/components/modules/Ticker';
@@ -14,6 +13,7 @@ export default function Home() {
     <>
       <Hero />
       <About />
+      <Feedback />
 
       <Ticker />
       <PrinciplesList />
@@ -25,9 +25,6 @@ export default function Home() {
         description="Использование гипноза для лечения и облегчения психологических травм, а также поиска причин текущих эмоциональных и физических проблем."
       />
 
-      <section className="h-[800px] bg-red-500" id="about">
-        <p>EXAMPLE ABOUT</p>
-      </section>
       <section className="h-[800px] bg-blue-500" id="services">
         <p>EXAMPLE SERVICES</p>
       </section>
@@ -39,12 +36,6 @@ export default function Home() {
           <div className="w-40 h-40 bg-red-600 m-auto"></div>
           <div className="w-40 h-40 bg-green-600 m-auto"></div>
         </Slider>
-      </section>
-      <section className="h-[800px] bg-orange-500" id="contact">
-        <p>EXAMPLE FORM</p>
-        <Container>
-          <Form className="bg-ui_light" />
-        </Container>
       </section>
     </>
   );
