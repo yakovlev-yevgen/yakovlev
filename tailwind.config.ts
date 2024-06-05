@@ -13,6 +13,7 @@ const config: Config = {
       sm: '480px',
       md: '768px',
       xl: '1280px',
+      xxl: '1440px',
 
       // xsOnly: { max: '479.98px' },
       smOnly: { max: '767.98px' },
@@ -27,6 +28,7 @@ const config: Config = {
           sm: '16px',
           md: '32px',
           xl: '20px',
+          xxl: '100px',
         },
       },
 
