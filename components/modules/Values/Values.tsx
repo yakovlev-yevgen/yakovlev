@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import classNames from 'classnames';
 
 import { Accordion } from '../Accordion';
 import { SectionSubTitle } from '@/components/ui-kit/SectionSubTitle';
@@ -7,7 +8,6 @@ import { Button } from '@/components/ui-kit/Button';
 
 import aboutValues from 'data/aboutValues.json';
 import faq from '@/data/faq.json';
-import classNames from 'classnames';
 
 export const Values: React.FC = () => {
   const {
@@ -22,7 +22,7 @@ export const Values: React.FC = () => {
 
   return (
     <div className="xl:h-[1004px] mb-[60px] md:mb-20">
-      <div className="xl:grid xl:grid-cols-2 xl:grid-rows-[112px_277px_auto_95px]">
+      <div className="xl:grid xl:grid-cols-[505px_610px] xl:gap-x-[125px] xl:grid-rows-[112px_277px_auto_95px]">
         <SectionSubTitle className="xl:col-span-2">{subtitle}</SectionSubTitle>
 
         <div className="col-start-2">

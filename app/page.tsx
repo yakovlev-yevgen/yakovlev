@@ -2,21 +2,18 @@ import { Hero } from '@/sections/Hero';
 import { About } from '@/sections/About';
 import { Feedback } from '@/sections/Feedback';
 
-import { PrinciplesList } from '@/components/modules/PrinciplesList';
 import { ServiceCard } from '@/components/ui-kit/ServiceCard';
 import { Ticker } from '@/components/modules/Ticker';
 import { Slider } from '@/components/ui-kit/Slider';
 
 export default function Home() {
   return (
-    // here below will be all the sections
     <>
       <Hero />
       <About />
       <Feedback />
 
       <Ticker />
-      <PrinciplesList />
       <ServiceCard
         title="Гипнотерапия"
         priceFiveSessions={100}
