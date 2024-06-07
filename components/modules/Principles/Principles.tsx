@@ -16,7 +16,7 @@ export const Principles: React.FC = () => {
   const [isHydrated, setIsHydrated] = useState<boolean>(false);
   const isTablet: boolean = useMediaQuery({
     minWidth: 768,
-    maxWidth: 1279.99,
+    maxWidth: 1279,
   });
 
   useEffect(() => {
