@@ -4,15 +4,32 @@ import React from 'react';
 import { Link as LinkScroll } from 'react-scroll';
 import cn from 'classnames';
 
-type ButtonProps = {
+type CommonProps = {
   children: React.ReactNode;
-  type?: 'button' | 'submit';
-  anchor?: string | undefined;
-  url?: string | undefined;
   handleClick?: () => void | undefined;
   disabled?: boolean;
   className?: string;
 };
+
+interface ButtonProp extends CommonProps {
+  type?: 'button' | 'submit';
+  anchor?: never;
+  url?: never;
+}
+
+interface AnchorProp extends CommonProps {
+  anchor: string;
+  url?: never;
+  type?: never;
+}
+
+interface UrlProp extends CommonProps {
+  url: string;
+  anchor?: never;
+  type?: never;
+}
+
+type ButtonProps = ButtonProp | AnchorProp | UrlProp;
 
 export const Button: React.FC<ButtonProps> = ({
   children,
