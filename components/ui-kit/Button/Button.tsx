@@ -1,12 +1,15 @@
 'use client';
 
 import React from 'react';
+import { Link as LinkScroll } from 'react-scroll';
 import cn from 'classnames';
 
 type ButtonProps = {
   children: React.ReactNode;
   type?: 'button' | 'submit';
-  handleClick?: () => void;
+  anchor?: string | undefined;
+  url?: string | undefined;
+  handleClick?: () => void | undefined;
   disabled?: boolean;
   className?: string;
 };
@@ -14,27 +17,66 @@ type ButtonProps = {
 export const Button: React.FC<ButtonProps> = ({
   children,
   type = 'button',
-  handleClick = () => {
-    return;
-  },
+  anchor,
+  url,
+  handleClick,
   disabled = false,
   className = '',
 }) => {
   return (
-    <button
-      className={cn(
-        'min-w-[310px] min-h-[55px] px-4 py-2 font-ui_roboto text-ui_reg_20 text-ui_light text-center bg-ui_accent border-2 border-transparent rounded-2xl transition-colors duration-[250ms] hocus:bg-ui_light hocus:text-ui_accent hocus:border-ui_accent cursor-pointer',
-        {
-          'cursor-wait bg-ui_accent_transparent_50 hocus:bg-ui_accent_transparent_50 hocus:text-ui_light':
-            disabled,
-        },
-        className,
+    <>
+      {!!url === false && !!anchor === false && (
+        <button
+          className={cn(
+            'button',
+            {
+              'disabled gap-4': disabled,
+            },
+            className,
+          )}
+          type={type}
+          onClick={() => handleClick && handleClick()}
+          disabled={disabled}
+        >
+          {disabled && <span className="spiner"></span>}
+          {children}
+        </button>
       )}
-      type={type}
-      onClick={handleClick}
-      disabled={disabled}
-    >
-      {children}
-    </button>
+      {!!anchor === true && (
+        <LinkScroll
+          onClick={() => handleClick && handleClick()}
+          smooth={true}
+          offset={0}
+          duration={500}
+          to={anchor}
+          href={`#${anchor}`}
+          className={cn(
+            'button',
+            {
+              disabled: disabled,
+            },
+            className,
+          )}
+        >
+          {children}
+        </LinkScroll>
+      )}
+      {!!url === true && (
+        <a
+          className={cn(
+            'button',
+            {
+              disabled: disabled,
+            },
+            className,
+          )}
+          href={url}
+          target="_blank"
+          rel="noopener nofollow noreferrer"
+        >
+          {children}
+        </a>
+      )}
+    </>
   );
 };
