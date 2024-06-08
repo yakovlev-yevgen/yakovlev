@@ -25,7 +25,7 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <>
-      {!!url === false && !!anchor === false && (
+      {!url && !anchor && (
         <button
           className={cn(
             'button',
@@ -42,7 +42,7 @@ export const Button: React.FC<ButtonProps> = ({
           {children}
         </button>
       )}
-      {!!anchor === true && (
+      {!!anchor && (
         <LinkScroll
           onClick={() => handleClick && handleClick()}
           smooth={true}
@@ -61,7 +61,7 @@ export const Button: React.FC<ButtonProps> = ({
           {children}
         </LinkScroll>
       )}
-      {!!url === true && (
+      {!!url && (
         <a
           className={cn(
             'button',
