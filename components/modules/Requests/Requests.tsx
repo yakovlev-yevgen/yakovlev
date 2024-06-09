@@ -16,6 +16,7 @@ export const Requests: React.FC = () => {
     imageAlt,
     imageSrc,
     buttonText,
+    buttonAnchor,
   } = aboutRequests;
 
   return (
@@ -44,7 +45,10 @@ export const Requests: React.FC = () => {
         className="mx-auto smOnly:mb-8 md:col-span-1 md:col-start-2 md:row-start-2 xl:col-start-3"
       />
 
-      <Button className="mx-auto block md:row-start-4 md:col-span-2 xl:col-span-3 xl:row-start-3 xl:mt-8">
+      <Button
+        className="mx-auto block md:row-start-4 md:col-span-2 xl:col-span-3 xl:row-start-3 xl:mt-8"
+        anchor={buttonAnchor}
+      >
         {buttonText}
       </Button>
     </div>

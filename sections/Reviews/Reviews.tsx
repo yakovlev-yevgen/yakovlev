@@ -43,7 +43,9 @@ export const Reviews: React.FC = () => {
         />
 
         <ReviewsSlider />
-        <Button className="block mx-auto">{buttonText}</Button>
+        <Button url="https://t.me/EvgeniyYChannel" className="block mx-auto">
+          {buttonText}
+        </Button>
       </Container>
     </section>
   );
