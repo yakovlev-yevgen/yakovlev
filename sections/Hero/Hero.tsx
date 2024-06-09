@@ -17,6 +17,7 @@ export const Hero: React.FC = () => {
     proffessionFirstLine,
     proffessionSecondLine,
     button: buttonTitle,
+    buttonAnchor,
   } = hero;
 
   return (
@@ -55,8 +56,8 @@ export const Hero: React.FC = () => {
         </p>
 
         <Button
-          type="button"
           className="mx-auto block md:ml-0 md:mb-[120px] xl:mb-[128px] relative z-[1]"
+          anchor={buttonAnchor}
         >
           {buttonTitle}
         </Button>
