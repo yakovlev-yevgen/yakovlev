@@ -15,6 +15,7 @@ export const Services: React.FC = async () => {
     title: { firstString, secondString },
     buttonTitle,
     detailsParts,
+    buttonUrl,
   } = txt;
 
   const { allServices: services } = await fetchServices();
@@ -52,7 +53,9 @@ export const Services: React.FC = async () => {
           {detailsParts[2]}
         </p>
         <Ticker className="mb-8 xl:mb-10" />
-        <Button className="m-auto">{buttonTitle}</Button>
+        <Button className="m-auto" url={buttonUrl}>
+          {buttonTitle}
+        </Button>
       </Container>
     </section>
   );

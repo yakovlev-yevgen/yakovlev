@@ -24,5 +24,6 @@
   },
   "imageAlt": "Евгений Яковлев с книгами",
   "imageSrc": "/images/yevgen-book@2x.jpg",
-  "buttonText": "Записаться на консультацию"
+  "buttonText": "Записаться на консультацию",
+  "buttonAnchor": "contact"
 }
