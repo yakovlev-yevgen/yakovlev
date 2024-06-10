@@ -18,6 +18,7 @@ export const Values: React.FC = () => {
     imageMobSrc,
     imageBigSrc,
     btn,
+    buttonAnchor,
   } = aboutValues;
 
   return (
@@ -73,7 +74,10 @@ export const Values: React.FC = () => {
           className="notXl:mb-8 mdOnly:w-[610px] mdOnly:mx-auto xl:col-start-2 xl:row-start-3"
         />
 
-        <Button className="mx-auto block xl:row-start-4 xl:col-span-2 xl:mt-10">
+        <Button
+          className="mx-auto block xl:row-start-4 xl:col-span-2 xl:mt-10"
+          anchor={buttonAnchor}
+        >
           {btn}
         </Button>
       </div>

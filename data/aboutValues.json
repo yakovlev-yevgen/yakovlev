@@ -10,5 +10,6 @@
   "imageAlt": "Евгений Яковлев сидит, держа свечу",
   "imageMobSrc": "/images/yevgen-candle@2x-mob.jpg",
   "imageBigSrc": "/images/yevgen-candle@2x-big-screen.jpg",
-  "btn": "Записаться на консультацию"
+  "btn": "Записаться на консультацию",
+  "buttonAnchor": "contact"
 }

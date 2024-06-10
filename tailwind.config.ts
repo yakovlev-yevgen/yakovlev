@@ -41,6 +41,7 @@ const config: Config = {
         ui_accent_transparent_50: 'rgba(85, 121, 118, 0.5)',
         ui_light_transparent_80: 'rgba(241, 241, 241, 0.8)',
         ui_light_transparent_50: 'rgba(241, 241, 241, 0.5)',
+        ui_dark_transparent_0: 'rgba(2, 2, 2, 0)',
         ui_dark_transparent_50: 'rgba(2, 2, 2, 0.5)',
         ui_dark_transparent_80: 'rgba(2, 2, 2, 0.8)',
         ui_red: '#F80909',
