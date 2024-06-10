@@ -43,35 +43,10 @@ export function generateMetadata(): Metadata {
     title: title,
     description: description,
     openGraph: {
-      title: title,
-      description: description,
-      siteName: title,
       locale: 'ru',
-      type: 'website',
-      images: [
-        {
-          url: '/meta/opengraph-image.jpg',
-          width: 1630,
-          height: 800,
-          alt: '/meta/opengraph-image.alt.txt',
-        },
-      ],
     },
     manifest: '/meta/manifest.webmanifest',
     robots: 'all',
-    twitter: {
-      card: 'summary_large_image',
-      title: title,
-      description: description,
-      images: [
-        {
-          url: '/meta/twitter-image.jpg',
-          width: 1630,
-          height: 800,
-          alt: '/meta/twitter-image.alt.txt',
-        },
-      ],
-    },
     alternates: {
       canonical: baseUrl,
     },
