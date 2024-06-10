@@ -10,15 +10,17 @@ import 'swiper/css/pagination';
 interface SliderProps {
   children: ReactNode[];
   spaceBetween?: number;
+  slidesPerView?: number;
   className?: string;
   slideClassName?: string;
 }
 
 export const Slider: React.FC<SliderProps> = ({
   children,
+  spaceBetween = 20,
+  slidesPerView = 2,
   className = '',
   slideClassName = '',
-  spaceBetween = 20,
 }) => {
   const [isHydrated, setIsHydrated] = useState<boolean>(false);
 
@@ -33,17 +35,19 @@ export const Slider: React.FC<SliderProps> = ({
           className={cn('sliderSwiper', className)}
           modules={[Autoplay, Pagination]}
           spaceBetween={spaceBetween}
-          slidesPerView={2}
+          slidesPerView={slidesPerView}
           slidesPerGroup={3}
           pagination={{
             clickable: true,
           }}
-          autoplay={{ delay: 5000 }}
           grabCursor={true}
           lazyPreloadPrevNext={2}
         >
           {children.map((child, index) => (
-            <SwiperSlide key={index} className={slideClassName}>
+            <SwiperSlide
+              key={index}
+              className={cn('!h-auto', { slideClassName })}
+            >
               {child}
             </SwiperSlide>
           ))}

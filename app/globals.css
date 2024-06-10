@@ -81,6 +81,39 @@ body {
   @apply absolute left-0 top-1/2 content-[''] w-[60px] h-[2px] rounded-sm bg-ui_accent;
 }
 
+.reviews .swiper-wrapper {
+  padding-bottom: 75px;
+}
+
+.quoteBlockFirst::before,
+.quoteBlockSecond::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  -webkit-mask:
+    linear-gradient(rgba(241, 241, 241, 1) 0 0) padding-box,
+    linear-gradient(rgba(241, 241, 241, 1) 0 0);
+  -webkit-mask-composite: destination-out;
+}
+
+.quoteBlockFirst::before {
+  background: linear-gradient(to right, rgba(241, 241, 241, 1), transparent 90%)
+    border-box;
+}
+
+.quoteBlockSecond::before {
+  background: linear-gradient(to left, rgba(241, 241, 241, 1), transparent 90%)
+    border-box;
+  -webkit-mask:
+    linear-gradient(rgba(241, 241, 241, 1) 0 0) padding-box,
+    linear-gradient(rgba(241, 241, 241, 1) 0 0);
+  -webkit-mask-composite: destination-out;
+}
 /* BUTTON */
 .button {
   @apply min-w-[310px] min-h-[55px] px-4 py-2 flex w-fit items-center justify-center font-ui_roboto text-ui_reg_20 text-ui_light text-center bg-ui_accent border-2 border-transparent rounded-2xl transition-colors duration-[250ms] hocus:bg-ui_light hocus:text-ui_accent hocus:border-ui_accent cursor-pointer;
