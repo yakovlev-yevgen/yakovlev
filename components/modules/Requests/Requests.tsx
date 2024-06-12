@@ -7,8 +7,6 @@ import { RequestsList } from '../RequestsList';
 
 import aboutRequests from 'data/aboutRequests.json';
 
-// type RequestsProps = {};
-
 export const Requests: React.FC = () => {
   const {
     subtitle,
@@ -36,6 +34,7 @@ export const Requests: React.FC = () => {
           alt={imageAlt}
           width={505}
           height={647}
+          quality={100}
           className="w-full h-full"
         />
       </div>

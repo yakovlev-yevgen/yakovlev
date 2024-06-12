@@ -44,6 +44,7 @@ export const Hero: React.FC = () => {
             width={650}
             height={900}
             priority
+            quality={100}
             className="h-full w-full object-cover xl:object-right-bottom"
           />
         </div>

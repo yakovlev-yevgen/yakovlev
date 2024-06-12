@@ -30,7 +30,13 @@ export const Feedback: React.FC = () => {
           <Form className="md:w-[505px] md:mx-auto" />
 
           <div className="smOnly:max-w-[440px] notXl:mx-auto md:w-[505px] md:h-[737px] rounded-2xl overflow-hidden">
-            <Image src={imageSrc} alt={imageAlt} width={505} height={737} />
+            <Image
+              src={imageSrc}
+              alt={imageAlt}
+              width={505}
+              height={737}
+              quality={100}
+            />
           </div>
         </div>
       </Container>
