@@ -28,7 +28,13 @@ export const Reviews: React.FC = () => {
         />
 
         <div className="absolute w-full smOnly:max-w-[480px] mdOnly:max-w-[768px] xl:w-[1440px] smOnly:!h-[250px] mdOnly:!h-[512px] xl:!h-[960px] smOnly:!top-[158px] md:!top-[227px] xl:!top-[328px] !left-1/2 -translate-x-1/2">
-          <Image fill src={src} alt={alt} className="w-full object-cover" />
+          <Image
+            fill
+            src={src}
+            alt={alt}
+            className="w-full object-cover"
+            quality={100}
+          />
         </div>
 
         <QuoteBlock

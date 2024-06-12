@@ -54,6 +54,7 @@ export const Values: React.FC = () => {
             alt={imageAlt}
             width={505}
             height={647}
+            quality={100}
             className="w-full h-full"
           />
         </div>

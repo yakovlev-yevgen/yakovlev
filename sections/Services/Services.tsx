@@ -21,10 +21,7 @@ export const Services: React.FC = async () => {
   const { allServices: services } = await fetchServices();
 
   return (
-    <section
-      className="section !pb-20 md:!pb-[100px] xl:!pb-[120px]"
-      id="services"
-    >
+    <section className="section" id="services">
       <Container>
         <SectionTitle
           className="xl:mb-[22px]"
@@ -47,16 +44,17 @@ export const Services: React.FC = async () => {
             ))}
           </ul>
         )}
-        <p className="mb-10 md:mb-8 xl:mb-6">
+        <p>
           {detailsParts[0]}
           <span className="font-bold">{detailsParts[1]}</span>
           {detailsParts[2]}
         </p>
-        <Ticker className="mb-8 xl:mb-10" />
-        <Button className="m-auto" url={buttonUrl}>
-          {buttonTitle}
-        </Button>
       </Container>
+
+      <Ticker className="mb-8 mt-10 md:mt-8 xl:mt-6 xl:mb-10" />
+      <Button className="m-auto" url={buttonUrl}>
+        {buttonTitle}
+      </Button>
     </section>
   );
 };
