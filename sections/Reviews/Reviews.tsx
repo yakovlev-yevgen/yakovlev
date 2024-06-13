@@ -35,8 +35,6 @@ export const Reviews: React.FC = () => {
             className="w-full object-cover"
             quality={100}
             sizes="100wv"
-            // placeholder="blur"
-            // blurDataURL=''
           />
         </div>
 

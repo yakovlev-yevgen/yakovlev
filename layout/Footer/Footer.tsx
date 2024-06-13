@@ -13,11 +13,11 @@ export const Footer: React.FC = () => {
     <footer className="py-10 md:py-8 xl:py-20 bg-ui_dark mt-auto relative after:absolute after:content-[''] after:h-[1px] after:w-full after:bg-ui_accent after:left-0 after:top-[434px] md:after:top-[262px] xl:after:top-[160px] before:absolute before:content-[''] before:h-[1px] before:w-full before:bg-ui_accent before:left-0 before:top-[312px] md:before:top-[156px] xl:before:hidden">
       <Container className="flex flex-col items-center">
         <div className="xl:flex items-center xl:mb-[78px]">
-          <Logo className="mb-10 md:mr-auto md:mb-8 xl:mb-0 xl:mr-[137px]" />
+          <Logo className="mb-10 md:mr-auto md:mb-8 xl:mb-0 xl:mr-[120px]" />
 
           <NavBar
             section="footer"
-            listClassName="mb-[60px] md:mb-[64px] xl:mb-0 xl:mr-[145px]"
+            listClassName="mb-[60px] md:mb-[64px] xl:mb-0 xl:mr-[130px]"
           />
 
           <Socials section="footer" listClassName="mb-[48px] xl:mb-0" />

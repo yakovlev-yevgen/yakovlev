@@ -6,7 +6,7 @@ import { Button } from '@/components/ui-kit/Button';
 import { Socials } from '@/components/modules/Socials';
 
 import hero from 'data/hero.json';
-import HeroImage from 'public/images/yevgen-hero@2x.jpg';
+import HeroImage from 'public/images/hero@2x.webp';
 
 export const Hero: React.FC = () => {
   const {
@@ -41,11 +41,11 @@ export const Hero: React.FC = () => {
           <Image
             src={HeroImage}
             alt={`${firstName} ${lastName} сидит на стуле`}
-            width={650}
-            height={900}
+            width={670}
+            height={1004}
             priority
             quality={100}
-            className="h-full w-full object-cover xl:object-right-bottom"
+            className="h-full w-full object-cover xl:object-right-center"
           />
         </div>
 
