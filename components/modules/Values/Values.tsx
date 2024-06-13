@@ -9,7 +9,7 @@ import { Button } from '@/components/ui-kit/Button';
 import aboutValues from 'data/aboutValues.json';
 import faq from '@/data/faq.json';
 
-export const Values: React.FC = () => {
+export const Values: React.FC = async () => {
   const {
     subtitle,
     paragraphBold,
@@ -48,7 +48,7 @@ export const Values: React.FC = () => {
         </div>
 
         {/* mobile image */}
-        <div className="md:hidden mx-auto mb-8 rounded-2xl overflow-hidden min-w-[343px] max-w-[440px] min-h-[440px] w-full h-[calc(100%_*_1.2827)] max-h-[calc(440*1.2827)] object-cover object-center">
+        <div className="md:hidden mx-auto mb-8 rounded-2xl overflow-hidden  max-w-[440px] w-full h-[calc(100%_*_1.2827)] max-h-[calc(440*1.2827)] object-cover object-center">
           <Image
             src={imageMobSrc}
             alt={imageAlt}

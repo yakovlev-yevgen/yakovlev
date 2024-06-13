@@ -27,9 +27,25 @@ export const ReviewsSlider: React.FC = () => {
                     'linear-gradient(270deg, rgba(32,32,32,0) 0%, rgba(32,32,32,1) 100%)',
                 } as CSSProperties
               }
-              className={`relative py-5 w-full h-full flex border border-transparent items-center ${index % 2 !== 0 ? 'pr-[47px] pl-[10px] rounded-r-2xl [background:padding-box_var(--bg-color),border-box_var(--border-color-right)]' : 'pl-[47px] pr-[10px] rounded-l-2xl [background:padding-box_var(--bg-color),border-box_var(--border-color-left)]'}`}
+              className={classNames(
+                'relative py-5 w-full h-full flex border border-transparent items-center',
+                {
+                  'pr-[47px] rounded-r-2xl [background:padding-box_var(--bg-color),border-box_var(--border-color-right)]':
+                    index % 2 !== 0,
+                  'pl-[47px] rounded-l-2xl [background:padding-box_var(--bg-color),border-box_var(--border-color-left)]':
+                    index % 2 === 0,
+                },
+              )}
             >
-              <p className="text-ui_dark text-ui_reg_16 font-ui_kurier whitespace-pre-wrap">
+              <p
+                className={classNames(
+                  'text-ui_dark text-ui_reg_16 font-ui_kurier whitespace-pre-wrap',
+                  {
+                    'text-left': index % 2 === 0,
+                    'text-right': index % 2 !== 0,
+                  },
+                )}
+              >
                 {review}
               </p>
 
