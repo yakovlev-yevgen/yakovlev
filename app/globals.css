@@ -16,7 +16,7 @@ body {
 }
 
 .field {
-  @apply w-full min-h-[55px] px-4 text-ui_light_16 rounded-2xl border-[1px] border-ui_accent bg-transparent placeholder:text-ui_dark_transparent_50 focus:outline-none;
+  @apply w-full min-h-[55px] px-4 text-ui_light_16 rounded-2xl border-[1px] border-ui_accent bg-transparent placeholder:text-ui_dark_transparent_50 focus:outline-none font-ui_roboto;
 }
 
 .error {
@@ -24,6 +24,7 @@ body {
 }
 
 /* REACT-PHONE-INPUT-2 */
+
 .flag {
   @apply scale-x-[2] scale-y-[1.6] left-[26px];
 }
@@ -61,8 +62,6 @@ body {
   .ticker > div {
     @apply w-[5020px];
     animation: scrollXl 10s linear infinite;
-    /* transform: translateX(0%); */
-    /* transform: translateX(calc(-33.333% - 14px)); */
   }
 }
 

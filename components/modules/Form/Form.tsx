@@ -115,8 +115,7 @@ export const Form = ({ className = '' }) => {
                 country={'md'}
                 localization={ru}
                 inputProps={{
-                  className: 'field !pl-[106px]',
-                  placeholder: '+7',
+                  className: 'field !pl-[106px] font-ui_roboto',
                 }}
                 {...field}
               />
