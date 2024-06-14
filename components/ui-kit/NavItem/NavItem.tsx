@@ -35,7 +35,7 @@ export const NavItem: React.FC<NavItemProps> = ({
       <LinkScroll
         onClick={() => handleClick && handleClick()}
         smooth={true}
-        offset={0}
+        offset={-20}
         duration={500}
         to={href}
         href={`#${href}`}
