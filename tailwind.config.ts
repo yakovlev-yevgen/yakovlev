@@ -85,6 +85,14 @@ const config: Config = {
           },
         ],
 
+        ui_light_18: [
+          '18px',
+          {
+            lineHeight: '1.2',
+            fontWeight: '300',
+          },
+        ],
+
         // body-2
         ui_light_20: [
           '20px',
