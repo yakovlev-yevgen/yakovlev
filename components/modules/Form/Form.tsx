@@ -71,7 +71,12 @@ export const Form = ({ className = '' }) => {
   };
 
   return (
-    <div className={cn('font-ui_roboto text-ui_dark', className)}>
+    <div
+      className={cn(
+        'font-ui_roboto text-ui_dark mb-20 md:mb-8 xl:mb-0',
+        className,
+      )}
+    >
       <h3 className="m-auto mb-4 md:mb-[26px] xl:mb-4 text-center text-ui_reg_16 md:text-ui_reg_20 xl:text-ui_reg_24 whitespace-break-spaces">
         {formTxt.title}
       </h3>
@@ -89,7 +94,7 @@ export const Form = ({ className = '' }) => {
         onSubmit={handleSubmit(onSubmitHandler)}
         noValidate={true}
       >
-        <div className="relative">
+        <div className="relative field-wrapper">
           <input
             className={cn('field', {
               ['border-ui_red border-[1px]']: errors?.name,
@@ -105,7 +110,7 @@ export const Form = ({ className = '' }) => {
           name="phone"
           control={control}
           render={({ field }) => (
-            <div className="relative">
+            <div className="relative field-wrapper">
               <PhoneInput
                 country={'md'}
                 localization={ru}
@@ -122,7 +127,7 @@ export const Form = ({ className = '' }) => {
           )}
         />
 
-        <div className="relative h-min">
+        <div className="relative h-min field-wrapper">
           <textarea
             className={cn(
               'field py-[18px] h-[150px] md:h-[181px] resize-none block',
@@ -148,7 +153,7 @@ export const Form = ({ className = '' }) => {
         </Button>
       </form>
 
-      <p className="smOnly:w-[290px] mx-auto mb-20 md:mb-8 text-ui_light_14 md:text-ui_light_16 md:whitespace-break-spaces">
+      <p className="smOnly:w-[290px] mx-auto text-ui_light_14 md:text-ui_light_16 md:whitespace-break-spaces text-center">
         {formTxt.agreement}
       </p>
 

@@ -29,6 +29,7 @@ export const Services: React.FC = async () => {
           secondString={secondString}
           position="right"
         />
+
         {!!services && (
           <ul className="grid grid-cols-1 gap-8 mb-10 md:mb-8 xl:mb-[50px] md:grid-cols-2 md:gap-y-6 xl:grid-cols-3 xl:gap-x-5 xl:gap-y-[50px]">
             {services.map(({ id, title, description, price, background }) => (
@@ -44,9 +45,12 @@ export const Services: React.FC = async () => {
             ))}
           </ul>
         )}
-        <p>
+
+        <p className="text-ui_light_16 md:text-ui_light_18">
           {detailsParts[0]}
-          <span className="font-bold">{detailsParts[1]}</span>
+          <span className="text-ui_reg_16 md:text-ui_reg_20">
+            {detailsParts[1]}
+          </span>
           {detailsParts[2]}
         </p>
       </Container>

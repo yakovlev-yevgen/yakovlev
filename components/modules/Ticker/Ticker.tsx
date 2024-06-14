@@ -23,6 +23,10 @@ export const Ticker: React.FC<TickerProps> = ({ className = '' }) => {
         <p className="font-ui_kurier text-ui_bold_14 xl:text-ui_bold_20 text-ui_dark whitespace-nowrap">
           {ticker.tickerText}
         </p>
+
+        <p className="font-ui_kurier text-ui_bold_14 xl:text-ui_bold_20 text-ui_dark whitespace-nowrap notXl:hidden">
+          {ticker.tickerText}
+        </p>
       </div>
     </div>
   );
