@@ -25,9 +25,9 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
   } = servicesData;
 
   return (
-    <div className="w-[343px] md:w-[302px] xl:w-[400px]">
+    <div className="w-full smOnly:max-w-[343px] md:w-[302px] xl:w-[400px]">
       <div
-        className={`rounded-[16px] p-5 w-[275px] h-[225px] xl:w-[400px] xl:h-[356px] mb-2 xl:mb-5 mx-auto bg-cover bg-ui_dark bg-image`}
+        className={`rounded-[16px] p-5 smOnly:max-w-[275px] h-[225px] xl:w-[400px] xl:h-[356px] mb-2 xl:mb-5 mx-auto bg-cover bg-ui_dark bg-image`}
       >
         <style jsx>{`
           .bg-image {
