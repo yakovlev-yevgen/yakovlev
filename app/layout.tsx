@@ -45,7 +45,7 @@ export function generateMetadata(): Metadata {
     openGraph: {
       locale: 'ru',
     },
-    manifest: '/meta/manifest.webmanifest',
+    manifest: '/meta/site.webmanifest',
     robots: 'all',
     alternates: {
       canonical: baseUrl,
@@ -111,7 +111,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body
-        className={`${kurier.variable} ${roboto.className} flex flex-col justify-start h-screen pt-[60px]`}
+        className={`${kurier.variable} ${roboto.variable} flex flex-col justify-start h-screen pt-[60px]`}
       >
         <Header />
         <main>{children}</main>
