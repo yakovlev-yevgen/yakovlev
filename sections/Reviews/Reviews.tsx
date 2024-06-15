@@ -34,7 +34,7 @@ export const Reviews: React.FC = () => {
             alt={alt}
             className="w-full object-cover"
             quality={100}
-            sizes="100wv"
+            sizes="100vw"
           />
         </div>
 
