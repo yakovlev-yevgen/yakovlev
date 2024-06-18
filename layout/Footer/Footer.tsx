@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Container } from '@/components/ui-kit/Container';
 import { Logo } from '@/components/ui-kit/Logo';
 import { NavBar } from '@/components/modules/NavBar';
