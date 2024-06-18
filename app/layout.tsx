@@ -36,7 +36,8 @@ const kurier = localFont({
 export function generateMetadata(): Metadata {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL as string;
   const title = 'Евгений Яковлев';
-  const description = 'Практикующий гипнотерапевт, регрессолог';
+  const description =
+    'Практикующий гипнотерапевт, регрессолог. Моя миссия - помогать людям достигать гармонии, здоровья и благополучия. Я готов помочь раскрыть потенциал Вашего подсознания и обрести внутренний покой.';
 
   return {
     metadataBase: new URL(baseUrl),
