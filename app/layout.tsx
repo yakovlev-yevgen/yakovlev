@@ -2,6 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 import localFont from 'next/font/local';
+import Script from 'next/script';
 
 import { Header } from '@/layout/Header';
 import { Footer } from '@/layout/Footer';
@@ -111,9 +112,29 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
+      <head />
       <body
         className={`${kurier.variable} ${roboto.variable} flex flex-col justify-start h-screen pt-[60px]`}
       >
+        {/* ✅ Google Ads (gtag.js) */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17502210542"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-ads"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-17502210542');
+            `,
+          }}
+        />
+
         <Header />
         <main>{children}</main>
         <Footer />
